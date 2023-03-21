@@ -1,0 +1,329 @@
+*{
+    margin-top: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.admindetails{
+    background-color: #ffff;
+    height: 100%;
+    position: fixed;
+}
+.profile{
+    display: flex;
+    float: left;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.profile-pic img{
+    border-radius: 50%;
+    /* padding-right: 50px; */
+}
+.adminname{
+    font-size: 18px;
+}
+.adminp-info{
+    padding-left: 25px;
+}
+.admin-nav{
+    padding-top: 30px;
+}
+.admin-nav ul {
+    list-style-type: none;
+}
+.admin-nav ul li{
+    padding-top: 20px;
+    width: 100%;
+    /* height: fit-content; */
+    
+}
+.admin-nav ul li a{
+    /* background-color: rgb(19, 96, 211); */
+    height: 140px;
+    width: 200px;
+    padding: 10px;
+}
+.dash-summary{
+    min-height: 70px;
+    width: 100%;
+    background-color: #ffff;
+    /* display: flex; */
+}
+.dash-summdet{
+    display: flex;
+    padding: 10px 0px;
+}
+.sum-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    /* background-color: rgb(19, 96, 211); */
+    background-color: #337ab7; 
+
+}
+@media screen and (max-widht:673) {
+    .dash-summdet{
+        padding: 2px 4px;
+        /* display: block; */
+
+    }
+    .sum-icon{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+}
+.sum-icon i{
+    color: #ffff;
+    z-index: 1;
+    padding: 13px;
+}
+.member-icon{
+    /* padding: 0px 0; */
+    /* color: red; */
+    padding: 12px 6px;
+}
+.visitor-icon{
+    color: #ffff;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+.dash-graph{
+    width: 100%;
+    height: 300px;
+    background-color: #000000;
+    color: #ffff;
+}
+table{
+    /* width: 100%; */
+    /* min-width: 80%; */
+    /* min-height: 150px; */
+    background-color: #fff;
+}
+/* --------navigation bar */
+nav{
+    background-color: #ffff;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+/* --------side bar------ */
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    /* top: 0; Stay at the top */
+    left: 0;
+    background-color: white; 
+    /* overflow-x: ;  */
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+    border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.nav-link{
+    /* margin-left: -2; */
+    z-index: 1;
+    color: red;
+
+}
+.sidenav ul{
+    list-style-type: none;
+    text-decoration: none;
+    margin-top: 10px;
+    /* margin-left: 2220px; */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 6px 0px 20px 0px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* padding: 14px 16px; */
+    transition: 0.3s;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #ffff;
+    background-color: #006600;
+    text-decoration: none;
+}
+.sidenav a:active {
+    background-color: #006600;
+    color: #ffff;
+    text-decoration: none;
+}
+.tabcontent{
+    /* display: none; */
+    height: fit-content;
+    margin-top: 290px;
+}
+#signout{
+    bottom: 0px;
+}
+/* Style page content */
+.main {
+    margin-left:180px; /* Same as the width of the sidebar */
+    /* padding: 0px 10px; */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    /* .sidenav {padding-top: 15px;} */
+    .sidenav a {font-size: 18px;}
+    .sidenav {height: 100%;}
+}
+/* all table div and form design */
+.admember-form,.adbook-form,.loanbk-form,.ovdue-bks,.avail-bks,.loand-bks,.libmembrs {
+    width: 100%;
+    min-height: 500px;
+    background-color: #ffff;
+    border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.admember-form legend,.adbook-form legend,
+.loanbk-form legend,.ovdue-bks legend,
+.avail-bks legend,.loand-bks legend,.libmembrs legend{
+    /* color: rgb(19, 96, 211); */
+    color: #337ab7; 
+
+}
+/* ---add book form */
+/* .adbook-form{
+    
+} */
+.adbook-form legend {
+    /* color: rgb(19, 96, 211); */
+    color: #337ab7; 
+
+}
+ /* fieldset{
+    color: rgb(19, 96, 211);
+    padding: 20px 0px 20px 50px;
+} */
+.adbook-fields{
+    padding: 10px 20px 20px 25px;
+    
+}
+/* Add a member form */
+/* .admember-form{
+    
+} */
+/* Add member fields */
+.admember-fields,.loanbk-fields{
+    padding: 10px 20px 20px 25px;
+    display: inline-block;
+    text-align: right;
+}
+.admember-fields input {
+   margin-bottom: 25px;
+}
+/* reposonsive user feilds */
+@media screen and (max-width:635px) {
+    .admember-fields {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .loanbk-fields {
+        display: inline-block;
+        text-align: left;
+        /* margin-bottom: 10px; */
+        /* margin-left: 0px; */
+        /* color: red; */
+        margin-bottom: 10px;
+    }
+}
+/* @media screen and(max-width:700px) {
+    .loanbk-fields {
+        display: inline-block;
+        text-align: left;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        color: red;
+    }
+} */
+/* Loan a book form */
+/* .loanbk-form{
+
+} */
+/* Loan book fields */
+.loanbk-fields{
+    padding: 10px 20px 20px 20px;
+    display: inline-block;
+    text-align: right;
+}
+.loanbk-fields input{
+    margin-bottom: 25px;
+}
+.loanbk-fields label{
+    /* display: inline-block; */
+}
+@media screen and (max-width:450px) {
+    
+}
+/* .loanbk-fields input[type=reset]{
+    margin-right: 120px;
+} */
+/* overdued books table */
+.ovdue-bks table,.avail-bks table,.loand-bks table,.libmembrs table {
+    margin: 10px 20px 20px 20px;
+    min-width: 90%;
+    height: 100px;
+}
+@media screen and (max-width:673) {
+    .ovdue-bks table,.avail-bks table,.loand-bks table,.libmembrs table{
+        width: 11px;
+    }
+}
+/* Availabe books table */
+/* .avail-bks{
+    
+} */
+/* Loaned books table */
+/* .loand-bks{
+    
+} */
+.nav-tabs li  a:hover {
+    border-color: #eee #eee #ddd;
+    /* background-color: rgb(19, 96, 211); */
+}
+/* .nav-pills .nav-link.active:visited{
+    background-color: red;
+} */
+/* .nav-pills .nav-link:visited{
+    background-color: red;
+} */
+.nav-pills .nav-link:hover {
+    color: #fff; 
+    background-color: #337ab7; 
+    /* background-color: rgb(19, 96, 211); */
+}
+/* .nav-pills .nav-link :visited{
+    background-color: red;
+ } */
+ /* .nav-pills .nav-link:focus{
+    background-color: red;
+ } */
+ /* .nav-pills .nav-link::after{
+    background-color: red;
+ } */
+ /* .dropdown-menu nav .nav-pills .nav-link:after{
+    color: greenyellow;
+ } */
+ .nav .nav-stacked > li > a:hover,
+.nav > li > a:focus{
+    background-color: #006600;
+    color: #fff;
+}

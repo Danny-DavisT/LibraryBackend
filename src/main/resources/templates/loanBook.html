@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loan-Book</title>
+        <link rel="stylesheet" href="css/main.css">
+    
+        <link rel="icon" href="image/favicon.ico" type="image/png" sizes="16x16">
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Custom CSS -->
+        <link href="css/business-frontpage.css" rel="stylesheet">
+    
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+    </head>
+    <header>
+        <nav class="navbar navbar-fixed-top " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
+                    </button>
+                    <a href="adminDashboard.html" class="">
+                        <img src="img/logoGRYellow-removebg-preview.png" alt="logo" srcset="" width="120px" height="70px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- <ul class="nav navbar-nav navbar-right">
+                        <li> 
+                            <a href="#" class="fa fa-bell-o fa-2x"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-comment-o fa-2x"></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img-circle" src="img/carton.jpg" alt="" srcset="" width="50px" height="50px">
+                            </a>
+                        </li>
+                    </ul> -->
+                    </div>
+                    </div>
+           
+            </div>
+            <!-- <div class="navbar-right">
+                <span class="fa fa-message"></span>
+                <span class="fa fa-facebook">ffffffffffffffff</span>
+            </div> -->
+        </nav>
+    </header>
+<body style="background-color: rgb(247,247,247);">
+    <div class="col-md-12">
+        <div class="col-md-10">
+            <div class="sidenav">
+                <ul class="nav nav-stacked">
+                    <!-- dashboard link -->
+                    <li class="">
+                        <!-- <button class="fa-fa-home tablinks" onclick="opencontent(event,dash-b)">Dashboard</button> -->
+                        <a class="fa fa-home "  href="adminDashboard.html">&nbsp;&nbsp;Dashboard</a> 
+                    </li>
+                    <!-- book dropdown -->
+                    <li class="dropdown"> 
+                        <a class="dropdown-toggle fa fa-book" data-toggle="dropdown" href="#">&nbsp;&nbsp;Books<b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class=""  href="#">Physical</a>   
+                            </li>
+                            <li>
+                                <a class="" href="#">Audio</a>
+                            </li>
+                            <li>
+                            <a classs="" href="#">Video</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- register dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle fa fa-plus-circle nav-link" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
+                        <ul class="dropdown-menu ">
+                            <li class="">
+                                <a class=""  href="registerMember.html" class="">New Member</a>
+                            </li>
+                            <li class="">
+                                <a class=""  href="registerBook.html" class="" >New Book</a>
+                            </li>
+                            <li class="">
+                                <a class=""  href="#" >New Visitor</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <!-- loan book link -->
+                    <li class="">
+                        <a class="fa fa-refresh nav-link"  href="loanBook.html" >&nbsp;&nbsp;Loan a Book</a>
+                    </li>
+                    <!-- view dropdown -->
+                    <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle fa fa-eye nav-link" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
+                        <ul class="dropdown-menu ">
+                            <li class="">
+                                <a class="nav-link" href="availableBooks.html" >Books Available in the Library</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="loanedBooks.html" >Books On Loan(Borrowed)</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#" >Overdued Books</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="libraryMembers.html" >Members</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- delete dropdown -->
+                    <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle fa fa-trash nav-link" data-toggle="dropdown">&nbsp;&nbsp;Delete<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="nav-link"  href="#" >Book</a>
+                                <!-- <a href="#">Video</a> -->
+                            </li>
+                            <li>
+                                <a class="nav-link"  href="#">Member</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Books<b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Physical</a>
+                                <a href="#">Audio</a>
+                                <a href="#">Video</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li>
+                        <a class="fa fa-sign-out  nav-link"  href="#"  id="signout">&nbsp;&nbsp;Sign out</a>
+                    </li>
+                </ul>
+              </div>
+              
+              <!-- Page content -->
+              <div class="tab-content main mt-3" >
+                <div class="tab-pane  in active" id="dash-b">
+                  <!-- Loan a book form -->
+                  <div class="tab-pane " id="lnbk-form">
+                     <form action="" class="loanbk-form">
+                        <fieldset>
+                            <legend>&nbsp; Loan A Book</legend>
+                            <div class="loanbk-fields">
+                            <label for="booknum">ISBN</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="booktitile">Book Title*</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="userid">User ID</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="name">Name</label> &nbsp;&nbsp;
+                            <input type="text" name="" id="" required> <br>
+                            <label for="issuedate">Date Of Issue</label> &nbsp;&nbsp;
+                            <input type="datetime-local" name="" id="" required> <br>
+                            <label for="returndate">Return Date</label> &nbsp;&nbsp;
+                            <input type="datetime-local" name="" id="" arial-required> <br> 
+                            <label for="fine">Fine</label>
+                            <input type="number" name="" id=""> <br>
+                            <input type="reset" value="Reset" class="btn btn-dark">
+                            <input type="submit" value="Save" class="btn btn-primary">
+                            </div>
+                        </fieldset>
+                      </form>
+                  </div>
+                
+                  
+                  <!-- <div class="shadow p-3 mb-5 bg-light rounded">Regular shadow</div> -->
+             
+        </div>
+        <div class="col-md-2">
+            <!-- <h1>hello</h1>
+            <Admin-Dashboard>hhvhfuycfmyktf</Admin-Dashboard> -->
+        </div>
+    </div>
+  
+</body>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom js -->
+<script src="js/script.js"></script>
+</html>

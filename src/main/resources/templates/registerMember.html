@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Register-Member</title>
+        <link rel="stylesheet" th:href="@{/assets/css/main.css}">
+
+        <link rel="icon" th:href="@{/assets/image/favicon.ico}" type="image/png" sizes="16x16">
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link th:href="@{/assets/css/business-frontpage.css}" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link th:href="@{/assets/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+    </head>
+    <header>
+        <nav class="navbar navbar-fixed-top " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
+                    </button>
+                    <a href="adminDashboard.html" class="">
+                        <img src="img/logoGRYellow-removebg-preview.png" alt="logo" srcset="" width="120px" height="70px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    </div>
+                    </div>
+           
+            </div>
+            
+        </nav>
+    </header>
+<body style="background-color: rgb(247,247,247);">
+    <div class="col-md-12">
+        <div class="col-md-10">
+            <div class="sidenav">
+                <ul class="nav nav-stacked">
+                    <!-- dashboard link -->
+                    <li class="">
+                        <!-- <button class="fa-fa-home tablinks" onclick="opencontent(event,dash-b)">Dashboard</button> -->
+                        <a class="fa fa-home "  href="adminDashboard.html">&nbsp;&nbsp;Dashboard</a> 
+                    </li>
+                    <!-- book dropdown -->
+                    <li class="dropdown"> 
+                        <a class="dropdown-toggle fa fa-book" data-toggle="dropdown" href="#">&nbsp;&nbsp;Books<b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class=""  href="#">Physical</a>   
+                            </li>
+                            <li>
+                                <a class="" href="#">Audio</a>
+                            </li>
+                            <li>
+                            <a classs="" href="#">Video</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- register dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle fa fa-plus-circle nav-link" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
+                        <ul class="dropdown-menu ">
+                            <li class="">
+                                <a class=""  href="registerMember.html" >New Member</a>
+                            </li>
+                            <li class="">
+                                <a class=""  href="registerBook.html"  >New Book</a>
+                            </li>
+                            <li class="">
+                                <a class=""  href="#" >New Visitor</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <!-- loan book link -->
+                    <li class="">
+                        <a class="fa fa-refresh nav-link"  href="loanBook.html" >&nbsp;&nbsp;Loan a Book</a>
+                    </li>
+                    <!-- view dropdown -->
+                    <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle fa fa-eye nav-link" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
+                        <ul class="dropdown-menu ">
+                            <li class="">
+                                <a class="nav-link" href="availableBooks.html" >Books Available in the Library</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="loanedBooks.html" >Books On Loan(Borrowed)</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#" >Overdued Books</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" th:href="@{/allMembers}" >Members</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- delete dropdown -->
+                    <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle fa fa-trash nav-link" data-toggle="dropdown">&nbsp;&nbsp;Delete<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="nav-link"  href="#" >Book</a>
+                                <!-- <a href="#">Video</a> -->
+                            </li>
+                            <li>
+                                <a class="nav-link"  href="#">Member</a>
+                            </li>
+                        </ul>
+                    </li>
+                   
+                    <li>
+                        <a class="fa fa-sign-out  nav-link"  href="#"  id="signout">&nbsp;&nbsp;Sign out</a>
+                    </li>
+                </ul>
+              </div>
+              
+              <!-- Page content -->
+              <div class="tab-content main mt-3" >
+                <div class="tab-pane  in active" id="dash-b">
+                  <!-- Add a member form -->
+                  <div class="tab-pane  mt-3" id="admem-form">
+                     <form th:action="@{/saveMember}" th:object="${member}" method="post" class="admember-form">
+                        <fieldset>
+                            <legend>&nbsp; Add New Member</legend>
+                            <div class="admember-fields">
+                            <label for="name">Name&nbsp;&nbsp;</label>
+                            <input th:field="*{name}" type="text" name="" id="" class=""> <br>
+                            <label for="idcardnum">ID Card Number</label>&nbsp;&nbsp;
+                            <input th:field="*{idNum}" type="number" name="" id=""> <br>
+                            <label for="adress">Address</label>&nbsp;&nbsp;
+                            <input th:field="*{address}" type="text" name="" id=""> <br>
+                            <label for="phone number">Phone Number</label>&nbsp;&nbsp;
+                            <input th:field="*{phone}" type="tel" name="" id=""> <br>
+                            <label for="email">Email</label>&nbsp;&nbsp;
+                            <input th:field="*{email}" type="email" name="" id=""> <br>
+                            <label for="gender">Gender</label> &nbsp;&nbsp;&nbsp;
+                            <input  type="radio" name="gender" th:field="*{sex}" value="male"  > Male &nbsp;
+                            <input type="radio" name="gender" th:field="*{sex}" value="female"> Female<br> <br>
+                            <label for="plan">Plan</label>&nbsp;&nbsp;
+                            <input th:field="*{plan}" type="text" name="" id=""> <br>
+                            <input type="reset" value="Reset" class="btn btn-dark">
+                            <input type="submit" value="Register" class="btn btn-primary text-right">
+                            </div>
+                        </fieldset>
+                      </form>
+                </div>             
+        </div>
+        <div class="col-md-2">
+            
+        </div>
+    </div>
+
+
+            <!-- jQuery -->
+            <script th:src="@{/assets/js/jquery.js}"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script th:src="@{/assets/js/bootstrap.min.js}"></script>
+            <!-- Custom js -->
+            <script th:src="@{/assets/js/script.js}"></script>
+</body>
+
+</html>

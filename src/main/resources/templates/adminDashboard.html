@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin-Dashboard</title>
+        <link rel="stylesheet" th:href="@{/assets/css/main.css}">
+    
+        <link rel="icon" th:href="@{/assets/image/favicon.ico}" type="image/png" sizes="16x16">
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet">
+    
+        <!-- Custom CSS -->
+        <link th:href="@{/assets/css/business-frontpage.css}" rel="stylesheet">
+    
+        <!-- Custom Fonts -->
+        <link th:href="@{/assets/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
+    </head>
+    <header>
+        <nav class="navbar navbar-fixed-top " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar "></span>
+                        <span class="icon-bar "></span>
+                    </button>
+                    <a th:href="@{/home}" class="">
+                        <img src="img/logoGRYellow-removebg-preview.png" alt="logo" srcset="" width="120px" height="70px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <!-- <ul class="nav navbar-nav navbar-right">
+                        <li> 
+                            <a href="#" class="fa fa-bell-o fa-2x"></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fa fa-comment-o fa-2x"></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="img-circle" src="img/carton.jpg" alt="" srcset="" width="50px" height="50px">
+                            </a>
+                        </li>
+                    </ul> -->
+                    </div>
+                    </div>
+           
+            </div>
+            <!-- <div class="navbar-right">
+                <span class="fa fa-message"></span>
+                <span class="fa fa-facebook">ffffffffffffffff</span>
+            </div> -->
+        </nav>
+    </header>
+<body style="background-color: rgb(247,247,247);">
+    <div class="col-md-12">
+        <div class="col-md-10">
+            <div class="sidenav">
+                <ul class="nav nav-stacked">
+                    <!-- dashboard link -->
+                    <li class="">
+                        <!-- <button class="fa-fa-home tablinks" onclick="opencontent(event,dash-b)">Dashboard</button> -->
+                        <a class="fa fa-home nav-pill"  th:href="@{/home}">&nbsp;&nbsp;Dashboard</a>
+                    </li>
+                    <!-- book dropdown -->
+                    <li class="dropdown"> 
+                        <a class="dropdown-toggle fa fa-book" data-toggle="dropdown" href="#">&nbsp;&nbsp;Books<b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class=""  href="#">Physical</a>   
+                            </li>
+                            <li>
+                                <a class="" href="#">Audio</a>
+                            </li>
+                            <li>
+                            <a classs="" href="#">Video</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- register dropdown -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle fa fa-plus-circle nav-link" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
+                        <ul class="dropdown-menu ">
+                            <li class="">
+                                <a   th:href="@{/registerMember}" >New Member</a>
+                            </li>
+                            <li >
+                                <a   href="registerBook.html"  >New Book</a>
+                            </li>
+                            <li >
+                                <a   href="#" >New Visitor</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <!-- loan book link -->
+                    <li class="">
+                        <a class="nav-link" th:href="@{/allMembers}" >Members</a>
+                    </li>
+                    <!-- view dropdown -->
+                    <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle fa fa-eye nav-link" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
+                        <ul class="dropdown-menu ">
+                            <li class="">
+                                <a class="nav-link" href="availableBooks.html" >Books Available in the Library</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="loanedBooks.html" >Books On Loan(Borrowed)</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#" >Overdued Books</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="libraryMembers.html" >Members</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- delete dropdown -->
+                    <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle fa fa-trash nav-link" data-toggle="dropdown">&nbsp;&nbsp;Delete<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="nav-link"  href="#" >Book</a>
+                                <!-- <a href="#">Video</a> -->
+                            </li>
+                            <li>
+                                <a class="nav-link"  href="#">Member</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="dropdown"> 
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Books<b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Physical</a>
+                                <a href="#">Audio</a>
+                                <a href="#">Video</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li>
+                        <a class="fa fa-sign-out  nav-link"  href="#"  id="signout">&nbsp;&nbsp;Sign out</a>
+                    </li>
+                </ul>
+              </div>
+              
+              <!-- Page content -->
+              <div class="tab-content main mt-3" >
+                <div class="tab-pane  in active" id="dash-b">
+                    <div class="dashboard " >
+                        <h1 class="bg-lighter">DASHBOARD</h1><br>
+                           <div class="dash-summary">
+                             <div class="row d-flex">
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-weight-bolder">Borrowed <br>
+                                               <span class="">234</span> 
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-book fa-2x fa-light"></i>
+                                        </div>
+                                        <div>
+                                            <p>Overdued <br>
+                                               <span>234</span> 
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-group fa-2x  member-icon center"></i>
+                                        </div>
+                                        <div>
+                                            <p>Members <br>
+                                               <span th:text="${countMembers}">234</span>
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-sm-6">
+                                    <div class="dash-summdet">
+                                        <div class="sum-icon ">
+                                            <i class="fa fa-user fa-2x fa-light visitor-icon"></i>
+                                        </div>
+                                        <div>
+                                            <p>Visitors <br>
+                                               <span>234</span> 
+                                            </p>
+                                            <!-- <p>245</p> -->
+                                        </div>
+                                    </div>
+                                 </div>
+                             </div>
+                           </div>
+                           <div class="dash-graph">
+                               <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem obcaecati optio reiciendis placeat ipsum minus inventore aspernatur, quaerat quis vero atque, quo ea vitae nesciunt praesentium ab iure ipsa enim?</p> -->
+                           </div>
+                           <!-- <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati dolorum consectetur quidem? Sint repudiandae hic facilis sunt unde, iusto repellat illum, libero voluptatum praesentium officia optio et magnam est corrupti.</p> -->
+                           <div class="ovdue-bks">
+                               <legend>&nbsp; Overdued books on loan</legend>
+                               <!-- <h3>Overdued books on loans</h3> -->
+                               <div class="table-responsive">
+                                <table class="table-striped">
+                                    <thead class="bg-primary" >
+                                        <tr>
+                                            <th>ISBN</th>
+                                            <th>Member</th>
+                                            <th>Title</th>
+                                            <th>Author</th>
+                                            <th>Return Date</th>
+                                            <th>Overdue</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1111111</td>
+                                            <td>User</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>june 10 2022</td>
+                                            <td>2 days</td>  
+                                            <td> 
+                                                <span class="fa fa-pencil fa-x"></span> &nbsp;
+                                                <span class="fa fa-trash-o fa-x"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1111111</td>
+                                            <td>User</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>june 10 2022</td>
+                                            <td>2 days</td>
+                                            <td>
+                                             <span class="fa fa-pencil fa-x"></span> &nbsp;
+                                                <span class="fa fa-trash-o fa-x"></span>
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>1111111</td>
+                                            <td>User</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>Nelson & Parker</td>
+                                            <td>june 10 2022</td>
+                                            <td>2 days</td>
+                                            <td>
+                                             <span class="fa fa-pencil fa-x"></span> &nbsp;
+                                                <span class="fa fa-trash-o fa-x"></span>
+                                            </td>
+                                           
+                                        </tr>
+                                    </tbody>
+                                </table>
+                               </div>
+                           </div>
+                       </div>
+                </div>
+               
+                  
+                  <!-- <div class="shadow p-3 mb-5 bg-light rounded">Regular shadow</div> -->
+             
+        </div>
+        <div class="col-md-2">
+            <!-- <h1>hello</h1>
+            <Admin-Dashboard>hhvhfuycfmyktf</Admin-Dashboard> -->
+        </div>
+    </div>
+  <div class="col-md-12">
+    <!-- <div class="col-md-2 fixed-top admindetails">
+        <h2>Library Admin</h2> <br> <br>
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="img/carton.jpg" alt="" width="50px" height="50px">
+            </div>
+            <div>
+
+            </div>
+            <div class="adminp-info">
+                <p class="adminname">Admin Name</p>
+                <p>Librarian</p>
+            </div>
+        </div>
+        <hr>
+        <br>
+        <div class="admin-nav">
+            <ul>
+                
+                <li>
+                    <a href="#">DASHBOARD</a>
+                </li>
+                <li>
+                    <a href="#">Library Users</a>
+                </li>
+                <li>
+                    <a href="#">Books</a>
+                </li>
+                <li>
+                    <a href="#">Members</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    
+    <div class="col-md-7">
+
+    </div>
+    <div class="col-md-3">
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In voluptas perferendis ad earum cumque hic quis vitae numquam quam exercitationem ducimus repudiandae, impedit tempore officiis sapiente aut, unde nesciunt consequatur?</p> -->
+    </div>
+  </div>
+
+
+        <!-- jQuery -->
+        <script th:src="@{/assets/js/jquery.js}"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script th:src="@{/assets/js/bootstrap.min.js}"></script>
+        <!-- Custom js -->
+        <script th:src="@{/assets/js/script.js}"></script>
+</body>
+
+</html>
