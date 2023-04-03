@@ -84,10 +84,10 @@
                         <a href="#" class="dropdown-toggle fa fa-plus-circle nav-link" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
                         <ul class="dropdown-menu ">
                             <li class="">
-                                <a   th:href="@{/registerMember}" >New Member</a>
+                                <a th:href="@{/registerMember}" >New Member</a>
                             </li>
                             <li >
-                                <a   href="registerBook.html"  >New Book</a>
+                                <a th:href="@{/registerBook}"  >New Book</a>
                             </li>
                             <li >
                                 <a   href="#" >New Visitor</a>
@@ -95,19 +95,22 @@
                         </ul>
                     </li>
                     <!-- loan book link -->
+                    <li class="">
+                        <a class="fa fa-refresh nav-link"  href="loanBook.html" >&nbsp;&nbsp;Loan a Book</a>
+                    </li>
 
                     <!-- view dropdown -->
                     <li class="dropdown"> 
                         <a href="#" class="dropdown-toggle fa fa-eye nav-link" data-toggle="dropdown">&nbsp;&nbsp;View<b class="caret"></b></a>
                         <ul class="dropdown-menu ">
                             <li class="">
-                                <a class="nav-link" href="availableBooks.html" >Books Available in the Library</a>
+                                <a class="nav-link" th:href="@{/availableBooks}" >Books Available in the Library</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="loanedBooks.html" >Books On Loan(Borrowed)</a>
+                                <a class="nav-link" th:href="@{/loanedBooks}" >Books On Loan(Borrowed)</a>
                             </li>
                             <li>
-                                <a class="nav-link" href="#" >Overdued Books</a>
+                                <a class="nav-link" th:href="@{/}" >Overdued Books</a>
                             </li>
                             <li class="">
                                 <a class="nav-link" th:href="@{/allMembers}" >Members</a>

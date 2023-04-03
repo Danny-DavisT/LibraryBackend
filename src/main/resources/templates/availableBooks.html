@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Available-Books</title>
-        <link rel="stylesheet" href="css/main.css">
-    
-        <link rel="icon" href="image/favicon.ico" type="image/png" sizes="16x16">
+        <link rel="stylesheet" th:href="@{/assets/css/main.css}">
+
+        <link rel="icon" th:href="@{/assets/image/favicon.ico}" type="image/png" sizes="16x16">
         <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+        <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet">
+
         <!-- Custom CSS -->
-        <link href="css/business-frontpage.css" rel="stylesheet">
-    
+        <link th:href="@{/assets/css/business-frontpage.css}" rel="stylesheet">
+
         <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
+        <link th:href="@{/assets/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css">
     </head>
     <header>
         <nav class="navbar navbar-fixed-top " role="navigation">
@@ -27,7 +27,7 @@
                         <span class="icon-bar "></span>
                         <span class="icon-bar "></span>
                     </button>
-                    <a href="adminDashboard.html" class="">
+                    <a th:href="@{/home}" class="">
                         <img src="img/logoGRYellow-removebg-preview.png" alt="logo" srcset="" width="120px" height="70px"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,7 +36,7 @@
                     </div>
            
             </div>
-           
+        </nav>>
     </header>
 <body style="background-color: rgb(247,247,247);">
     <div class="col-md-12">
@@ -46,7 +46,7 @@
                     <!-- dashboard link -->
                     <li class="">
                         <!-- <button class="fa-fa-home tablinks" onclick="opencontent(event,dash-b)">Dashboard</button> -->
-                        <a class="fa fa-home "  href="adminDashboard.html">&nbsp;&nbsp;Dashboard</a> 
+                        <a class="fa fa-home" th:href="@{home}">&nbsp;&nbsp;Dashboard</a>
                     </li>
                     <!-- book dropdown -->
                     <li class="dropdown"> 
@@ -68,13 +68,13 @@
                         <a href="#" class="dropdown-toggle fa fa-plus-circle nav-link" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
                         <ul class="dropdown-menu ">
                             <li class="">
-                                <a class=""  href="registerMember.html" class="">New Member</a>
+                                <a th:href="@{/registerMember}" >New Member</a>
                             </li>
-                            <li class="">
-                                <a class=""  href="registerBook.html" class="" >New Book</a>
+                            <li >
+                                <a th:href="@{/registerBook}"  >New Book</a>
                             </li>
-                            <li class="">
-                                <a class=""  href="#" >New Visitor</a>
+                            <li >
+                                <a   href="#" >New Visitor</a>
                             </li>
                             
                         </ul>
@@ -186,7 +186,7 @@
             
         </div>
     </div>
- 
+        </div>
 </body>
 <!-- jQuery -->
 <script src="js/jquery.js"></script>

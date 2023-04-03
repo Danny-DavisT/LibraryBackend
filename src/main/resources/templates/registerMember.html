@@ -27,7 +27,7 @@
                         <span class="icon-bar "></span>
                         <span class="icon-bar "></span>
                     </button>
-                    <a href="adminDashboard.html" class="">
+                    <a th:href="@{/home}" class="">
                         <img src="img/logoGRYellow-removebg-preview.png" alt="logo" srcset="" width="120px" height="70px"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -46,7 +46,7 @@
                     <!-- dashboard link -->
                     <li class="">
                         <!-- <button class="fa-fa-home tablinks" onclick="opencontent(event,dash-b)">Dashboard</button> -->
-                        <a class="fa fa-home "  href="adminDashboard.html">&nbsp;&nbsp;Dashboard</a> 
+                        <a class="fa fa-home "  th:href="@{/home}">&nbsp;&nbsp;Dashboard</a>
                     </li>
                     <!-- book dropdown -->
                     <li class="dropdown"> 
@@ -68,10 +68,10 @@
                         <a href="#" class="dropdown-toggle fa fa-plus-circle nav-link" data-toggle="dropdown">&nbsp;&nbsp;Register<b class="caret"></b></a>
                         <ul class="dropdown-menu ">
                             <li class="">
-                                <a class=""  href="registerMember.html" >New Member</a>
+                                <a class=""  th:href="@{/registerMember}" >New Member</a>
                             </li>
                             <li class="">
-                                <a class=""  href="registerBook.html"  >New Book</a>
+                                <a th:href="@{/registerBook}"  >New Book</a>
                             </li>
                             <li class="">
                                 <a class=""  href="#" >New Visitor</a>

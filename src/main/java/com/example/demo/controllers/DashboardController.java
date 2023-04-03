@@ -58,4 +58,9 @@ public class DashboardController {
         model.addAttribute("member", memberRepository.findById(id).get());
         return "updateMember";
     }
+
+//    @GetMapping("/registerBook")
+//    public String registerBook() {
+//        return"registerBook";
+//    }
 }
